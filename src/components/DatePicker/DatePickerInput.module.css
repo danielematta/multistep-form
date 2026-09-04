@@ -1,0 +1,164 @@
+.inputComponent {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0;
+}
+
+.inputLabel {
+  width: fit-content;
+  margin-bottom: 4px;
+
+  font-size: 1.1rem;
+}
+
+.input {
+  background-color: var(--color-input-background);
+  border-radius: 5px;
+}
+
+.input :global(.MuiPickersOutlinedInput-root) {
+  height: 50px;
+  padding: 0 16px 0 16px !important;
+}
+
+.input :global(.MuiPickersSectionList-root) {
+  opacity: 1;
+  cursor: text;
+  padding: 0 0 0 0 !important;
+}
+
+.input
+  :global(
+    .MuiPickersSectionList-sectionContent.MuiPickersInputBase-sectionContent
+  ) {
+  font-family: var(--sans) !important;
+  font-size: 18px !important;
+  line-height: 145% !important;
+  letter-spacing: 0.18px !important;
+  color: var(--color-text) !important;
+}
+
+.input :global(.MuiPickersSectionList-sectionContent) {
+  color: var(--color-text);
+}
+
+.input :global(.MuiPickersSectionList-sectionPlaceholder) {
+  color: var(--color-text);
+}
+
+.input :global(.MuiIconButton-root) {
+  color: var(--color-text);
+}
+
+.input :global(.MuiPickersSectionList-root)::selection {
+  background-color: var(--color-button-background-hover);
+}
+
+.input :global(.MuiIconButton-root:hover) {
+  background-color: var(--color-button-background-hover);
+}
+
+.input :global(.MuiPickersOutlinedInput-notchedOutline) {
+  border: 2px solid var(--color-border);
+  border-radius: 5px;
+}
+
+.input
+  :global(
+    .MuiPickersOutlinedInput-root:hover .MuiPickersOutlinedInput-notchedOutline
+  ) {
+  border-color: var(--color-border);
+  border-radius: 5px;
+}
+
+.input
+  :global(
+    .MuiPickersOutlinedInput-root.Mui-focused
+      .MuiPickersOutlinedInput-notchedOutline
+  ) {
+  border-color: var(--color-primary) !important;
+}
+
+.calendar {
+  box-shadow: var(--shadow) !important;
+}
+
+.calendar :global(.MuiDateCalendar-root),
+.calendar :global(.MuiPickersCalendarHeader-root),
+.calendar :global(.MuiPickersDay-root),
+.calendar :global(.MuiMonthCalendar-button),
+.calendar :global(.MuiYearCalendar-button) {
+  font-family: var(--sans) !important;
+  font-size: 18px !important;
+  line-height: 145% !important;
+  letter-spacing: 0.18px !important;
+  color: var(--color-text) !important;
+}
+
+.calendar :global(.MuiPickersCalendarHeader-label) {
+  font-family: var(--sans) !important;
+  font-size: 18px !important;
+  line-height: 145% !important;
+  letter-spacing: 0.18px !important;
+  color: var(--color-text) !important;
+}
+
+.calendar :global(.MuiPickerDay-root) {
+  font-family: var(--sans) !important;
+  font-size: 18px !important;
+  line-height: 145% !important;
+  letter-spacing: 0.18px !important;
+  color: var(--color-text) !important;
+}
+
+.calendar :global(.MuiDayCalendar-weekDayLabel) {
+  font-family: var(--sans) !important;
+  font-size: 18px !important;
+  line-height: 145% !important;
+  letter-spacing: 0.18px !important;
+}
+
+.calendar :global(.MuiDateCalendar-root) {
+  background-color: var(--color-input-background);
+}
+
+.calendar :global(.MuiYearCalendar-button:hover) {
+  background-color: var(--color-button-background-hover);
+}
+
+.calendar :global(.MuiMonthCalendar-button:hover) {
+  background-color: var(--color-button-background-hover);
+}
+
+.calendar :global(.MuiPickerDay-root:hover) {
+  background-color: var(--color-button-background-hover);
+}
+
+.calendar :global(.MuiYearCalendar-button:focus:not(.Mui-selected)) {
+  background-color: transparent !important;
+}
+
+.calendar :global(.MuiYearCalendar-button:focus:not(.Mui-selected):hover) {
+  background-color: var(--color-button-background-hover) !important;
+}
+
+.calendar :global(.MuiYearCalendar-button.Mui-selected),
+.calendar :global(.MuiYearCalendar-button.Mui-selected:hover),
+.calendar :global(.MuiYearCalendar-button.Mui-selected:focus),
+
+.calendar :global(.MuiMonthCalendar-button.Mui-selected),
+.calendar :global(.MuiMonthCalendar-button.Mui-selected:hover),
+.calendar :global(.MuiMonthCalendar-button.Mui-selected:focus),
+
+.calendar :global(.MuiPickerDay-root.Mui-selected),
+.calendar :global(.MuiPickerDay-root.Mui-selected:hover),
+.calendar :global(.MuiPickerDay-root.Mui-selected:focus) {
+  background-color: var(--color-primary) !important;
+}
+
+.calendar
+  :global(.MuiPickersCalendarHeader-switchViewButton:hover),
+.calendar
+  :global(.MuiPickersArrowSwitcher-button:hover) {
+  background-color: var(--color-button-background-hover);
+}

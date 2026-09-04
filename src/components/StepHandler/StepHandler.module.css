@@ -1,0 +1,45 @@
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightButtonSoloContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.rightButton {
+    height: 50px;
+    width: 120px;
+
+    color: var(--color-text-secondary);
+    font-size: 1.3rem;
+
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-primary);
+}
+
+.rightButton:hover {
+    cursor: pointer;
+    background-color: var(--color-primary-hover);
+}
+
+.leftButton {
+    height: 50px;
+    width: 120px;
+
+
+    font-size: 1.3rem;
+
+    border: solid 2px var(--color-border);
+    border-radius: 5px;
+    background-color: var(--color-button-background);
+}
+
+.leftButton:hover {
+    cursor: pointer;
+    background-color: var(--color-button-background-hover);
+}

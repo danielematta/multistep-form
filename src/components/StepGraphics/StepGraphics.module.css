@@ -1,0 +1,53 @@
+.stepGraphicsContainer {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+
+  margin-bottom: 4px;
+}
+
+.stepContainer {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 80px;
+}
+
+.circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.circleHighlighted {
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  font-weight: bold;
+  border: 3px solid var(--color-primary);
+}
+
+.line {
+  flex: 1;
+  height: 2px;
+  background-color: var(--color-text);
+  margin-top: 15px;
+}
+
+.lineHighlighted {
+  height: 3px;
+  background-color: var(--color-primary);
+}
+
+.labelHighlighted {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+

@@ -1,0 +1,15 @@
+.formLayout {
+  width: 100%;
+  max-width: 600px;
+
+  padding: 16px;
+
+  background-color: var(--color-surface);
+  border: solid 1px var(--color-border);
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+}
+
+.title {
+  text-align: center;
+}

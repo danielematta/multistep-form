@@ -1,14 +1,68 @@
 :root {
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+
+  --color-primary: rgb(21, 128, 61);
+  --color-primary-hover: rgb(22, 163, 74);
+  /* --color-primary-light: #DCFCE7; */
+
+  --color-button-background: rgb(248, 250, 249);
+  --color-button-background-hover: rgb(214, 222, 217);
+
+  --color-background: rgb(248, 250, 249);
+  --color-surface: rgb(255, 255, 255);
+  --color-input-background: rgb(243, 246, 244);
+
+  --color-border: rgb(214, 222, 217);
+  /* --color-divider: #E5EAE7; */
+
+  --color-text: rgb(23, 33, 27);
+  --color-text-secondary: rgb(248, 250, 249);
+  /* --color-text-muted: #87928B; */
+
+  /* --color-disabled: #E9EEEB;
+  --color-error: #DC2626; */
+
+  --shadow: 0 12px 40px rgba(23, 33, 27, 0.169);
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
-  color: var(--text);
-  background: var(--bg);
+  color: var(--color-text);
+  background: var(--color-background);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+input {
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color: var(--color-text);
+}
+
+button {
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color: var(--color-text);
 }

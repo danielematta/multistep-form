@@ -1,10 +1,12 @@
 import "./App.css";
+import MainLayout from "./layouts/MainLayout/MainLayout";
+import FormLayout from "./layouts/FormLayout/FormLayout";
 
 function App() {
   return (
-    <>
-      <h1>Iniziamo</h1>
-    </>
+    <MainLayout>
+      <FormLayout />
+    </MainLayout>
   );
 }
 

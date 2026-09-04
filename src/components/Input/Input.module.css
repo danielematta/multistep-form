@@ -1,0 +1,32 @@
+.inputComponent {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0;
+}
+
+.inputLabel {
+    width: fit-content;
+    margin-bottom: 4px;
+
+    font-size: 1.1rem;
+}
+
+.input {
+    height: 50px;
+    padding: 8px 16px;
+
+    font-size: 1rem;
+
+    border: solid 2px var(--color-border);
+    border-radius: 5px;
+    background-color: var(--color-input-background);
+}
+
+.input:focus {
+    outline: none;
+    border: solid 2px var(--color-primary);
+}
+
+.input::selection {
+    background-color: var(--color-button-background-hover);
+}
