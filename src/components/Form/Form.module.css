@@ -68,12 +68,15 @@
 }
 
 .dataContainer {
-  display: flex;
   font-weight: bold;
 }
 
 .dataLabel {
   font-weight:normal;
+}
+
+.value {
+  overflow-wrap: anywhere;
 }
 
 .error {

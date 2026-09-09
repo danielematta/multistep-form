@@ -234,14 +234,17 @@ const Form = ({
         <>
           {Object.entries(formValues).map(([name, value]) => (
             <div className={styles.dataContainer} key={name}>
-              <div className={styles.dataLabel}>
+              <span className={styles.dataLabel}>
                 {labels[name as keyof FormValuesTypes]}:&nbsp;
-              </div>
-              {name === "privacyCheckbox" || name === "privacyCheckboxOptional"
-                ? value
-                  ? "accepted"
-                  : "refused"
-                : value}
+              </span>
+              <span className={styles.value}>
+                {name === "privacyCheckbox" ||
+                name === "privacyCheckboxOptional"
+                  ? value
+                    ? "accepted"
+                    : "refused"
+                  : value}
+              </span>
             </div>
           ))}
         </>

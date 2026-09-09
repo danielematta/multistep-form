@@ -18,7 +18,7 @@ import {
 import { createPortal } from "react-dom";
 import SubmitModal from "../SubmitModal/SubmitModal";
 
-type HandleFormValuesErrorsProps = {
+type HandleFormValuesErrorsParams = {
   values: FormValuesTypes;
   currentStep: number;
 };
@@ -29,7 +29,7 @@ const MultiStepFormHandler = () => {
     useState<FormValuesTypes>(initialFormValues);
   const [formValuesErrors, setFormValuesErrors] =
     useState<FormValueErrorsTypes>(initialFormValueErrors);
-    const [submitModalStatus, setSubmitModalStatus] = useState<boolean>(false);
+  const [submitModalStatus, setSubmitModalStatus] = useState<boolean>(false);
 
   const handleFormValueChange = (newData: HandleFormValueChangeParams) => {
     if ("birthdate" in newData) {
@@ -57,7 +57,7 @@ const MultiStepFormHandler = () => {
   const handleFormValuesErrors = ({
     values,
     currentStep,
-  }: HandleFormValuesErrorsProps) => {
+  }: HandleFormValuesErrorsParams) => {
     if (currentStep === 1) {
       const step1Errors = step1Validator(values);
       setFormValuesErrors((prevState) => ({
@@ -83,17 +83,25 @@ const MultiStepFormHandler = () => {
       return;
     }
     setCurrentStep((prev) => prev + 1);
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
   };
 
   const handleBackButton = () => {
     setCurrentStep((prev) => prev - 1);
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
   };
 
   const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     setSubmitModalStatus(true);
-  }
+  };
 
   const handleSubmitModal = () => {
     setSubmitModalStatus((prev) => !prev);
@@ -102,7 +110,11 @@ const MultiStepFormHandler = () => {
   const handleFormReset = () => {
     setFormValues(initialFormValues);
     setCurrentStep(1);
-  }
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
+  };
 
   return (
     <>
@@ -140,10 +152,20 @@ const MultiStepFormHandler = () => {
           <button className={styles.leftButton} onClick={handleBackButton}>
             Back
           </button>
-          <button className={styles.rightButton} type="submit" form="form">Confirm</button>
+          <button className={styles.rightButton} type="submit" form="form">
+            Confirm
+          </button>
         </div>
       )}
-      {submitModalStatus && createPortal(<SubmitModal isOpen={submitModalStatus} onClose={handleSubmitModal} formReset={handleFormReset} />, document.body)}
+      {submitModalStatus &&
+        createPortal(
+          <SubmitModal
+            isOpen={submitModalStatus}
+            onClose={handleSubmitModal}
+            formReset={handleFormReset}
+          />,
+          document.body,
+        )}
     </>
   );
 };
