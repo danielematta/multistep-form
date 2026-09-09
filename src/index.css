@@ -19,8 +19,8 @@
   --color-text-secondary: rgb(248, 250, 249);
   /* --color-text-muted: #87928B; */
 
-  /* --color-disabled: #E9EEEB;
-  --color-error: #DC2626; */
+  /* --color-disabled: #E9EEEB; */
+  --color-error: #DC2626;
 
   --shadow: 0 12px 40px rgba(23, 33, 27, 0.169);
 

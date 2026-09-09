@@ -17,6 +17,18 @@
   align-items: center;
   gap: 8px;
 
+  margin-top: 16px;
+
+  cursor: pointer;
+}
+
+.privacyCheckboxOptionalContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 16px;
+
   cursor: pointer;
 }
 
@@ -50,7 +62,25 @@
 
 .privacyCheckbox:checked::before {
   content: "✓";
-  color:  var(--color-button-background);
+  color: var(--color-button-background);
   font-size: 1rem;
   font-weight: bold;
+}
+
+.dataContainer {
+  display: flex;
+  font-weight: bold;
+}
+
+.dataLabel {
+  font-weight:normal;
+}
+
+.error {
+  margin-top: 8px;
+  color: var(--color-error);
+}
+
+.privacyCheckboxError {
+  border: solid 2px var(--color-error);
 }

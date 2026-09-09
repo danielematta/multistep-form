@@ -1,7 +1,7 @@
 .inputComponent {
     display: flex;
     flex-direction: column;
-    margin: 16px 0;
+    margin-top: 16px;
 }
 
 .inputLabel {
@@ -29,4 +29,8 @@
 
 .input::selection {
     background-color: var(--color-button-background-hover);
+}
+
+.error {
+    border: solid 2px var(--color-error);
 }

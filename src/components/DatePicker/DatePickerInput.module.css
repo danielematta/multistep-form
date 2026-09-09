@@ -63,12 +63,24 @@
   border-radius: 5px;
 }
 
+.inputError :global(.MuiPickersOutlinedInput-notchedOutline) {
+  border: 2px solid var(--color-error);
+}
+
 .input
   :global(
     .MuiPickersOutlinedInput-root:hover .MuiPickersOutlinedInput-notchedOutline
   ) {
   border-color: var(--color-border);
   border-radius: 5px;
+}
+
+.inputError
+  :global(
+    .MuiPickersOutlinedInput-root:hover
+      .MuiPickersOutlinedInput-notchedOutline
+  ) {
+  border-color: var(--color-error);
 }
 
 .input
