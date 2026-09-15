@@ -27,7 +27,7 @@ A responsive multi-step form built with React and TypeScript. It was created as 
 - Form data formatting before displaying the final summary
   - Capitalization of personal and address-related fields
   - Uppercase formatting for fiscal code and postcode
-  - Whitespace trimming for selected fields
+  - Whitespace trimming
 - Confirmation modal after submission
 - Responsive layout for desktop and mobile
 
