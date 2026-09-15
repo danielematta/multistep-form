@@ -11,16 +11,26 @@ export const isNotEmpty = (value: string): string | undefined => {
   return undefined;
 };
 
+export const isLetterOnly = (value: string): string | undefined => {
+  const isLetterOnlyRegex = /^[\p{L} ]+$/u;
+
+  if (!isLetterOnlyRegex.test(value)) {
+    return "The field can only contain letters."
+  }
+
+  return undefined;
+}
+
 export const isBirthdateValid = (value: string): string | undefined => {
-  const birthdateRegex = /^\d{2}\/\d{2}\/\d{4}$/;
+  // const birthdateRegex = /^\d{2}\/\d{2}\/\d{4}$/;
 
   if (value.trim().length < 1) {
     return "The field cannot be empty.";
   }
 
-  if (!birthdateRegex.test(value)) {
-    return "Date must be in DD/MM/YYYY format.";
-  }
+  // if (!birthdateRegex.test(value)) {
+  //   return "Date must be in DD/MM/YYYY format.";
+  // }
 
   const birthdate = dayjs(value, "DD/MM/YYYY", true);
 

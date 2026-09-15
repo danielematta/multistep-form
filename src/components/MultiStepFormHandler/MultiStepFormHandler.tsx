@@ -17,6 +17,7 @@ import {
 } from "../../validators/stepValidators";
 import { createPortal } from "react-dom";
 import SubmitModal from "../SubmitModal/SubmitModal";
+import dataFormat from "../../utility/dataFormat";
 
 type HandleFormValuesErrorsParams = {
   values: FormValuesTypes;
@@ -81,6 +82,9 @@ const MultiStepFormHandler = () => {
     });
     if (Object.values(errors).some((error) => error !== undefined)) {
       return;
+    }
+    if (currentStep === 2) {
+      dataFormat({formData: formValues, setValue: setFormValues});
     }
     setCurrentStep((prev) => prev + 1);
     window.scrollTo({

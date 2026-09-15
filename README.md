@@ -18,11 +18,16 @@ A responsive multi-step form built with React and TypeScript. It was created as 
 - Step progress indicator
 - Form validation before moving to the next step:
     - Required fields and checkbox
+    - Letter only fields
     - Date format and validity, including prevention of future dates
     - Italian fiscal code format
     - Phone number format
     - E-mail format
 - Material UI Date Picker for a consistent date selection experience across browsers
+- Form data formatting before displaying the final summary
+  - Capitalization of personal and address-related fields
+  - Uppercase formatting for fiscal code and postcode
+  - Whitespace trimming for selected fields
 - Confirmation modal after submission
 - Responsive layout for desktop and mobile
 
@@ -42,6 +47,8 @@ src/
 - Creating reusable form components
 - Handling controlled inputs
 - Organizing validation logic into reusable functions
+- Combining multiple validation rules for individual fields
+- Formatting and normalizing form data before displaying the final summary
 - Working with Material UI Date Picker and Day.js
 - Creating a confirmation modal with React Portal
 - Responsive layout with CSS

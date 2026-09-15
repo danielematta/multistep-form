@@ -1,8 +1,9 @@
 import styles from "./Input.module.css";
+import { type FormValuesTypes } from "../../types/types";
 
 type InputProps = {
     label: string;
-    idName: string;
+    idName: keyof FormValuesTypes;
     type: React.HTMLInputTypeAttribute;
     value: string;
     error: string | undefined;
